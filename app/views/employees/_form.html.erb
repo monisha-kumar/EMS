@@ -1,0 +1,13 @@
+<%= form_with(model:@emp,local: true) do |f| %>
+
+  <p><%= f.label :name %>
+    <%= f.text_area :name %>
+  </p>
+
+  <p><%= f.label :address %>
+    <%= f.text_field :address %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<%end %>

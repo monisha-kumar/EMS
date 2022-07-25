@@ -1,0 +1,25 @@
+<h1>LISTING PAGE</h1>
+<table>
+  <thead>
+  <tr>
+    <th>NAME</th>
+    <th>ADDRESS</th>
+    <th>OPTION</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @emp.each do |emp| %>
+  <tr>
+    <td><%= emp.name %></td>
+    <td><%= emp.address %></td>
+    <td><%=link_to 'Show',employee_path(emp)%></td>
+    <td><%=link_to 'Edit',edit_employee_path(emp)%></td>
+    <td> <%= button_to 'Delete', emp, method: :delete %></td>
+  </tr>
+  </tbody>
+<%end %>
+</table>
+<p>
+<td><%=link_to 'CREATE NEW',new_employee_path(@emp)%></td>
+</p>
